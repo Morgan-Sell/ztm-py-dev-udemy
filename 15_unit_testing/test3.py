@@ -2,7 +2,7 @@ import unittest
 import script
 
 
-class TestMain(unittest.TestCase):
+class TestGame(unittest.TestCase):
     def setup(self):
         print("testing function from random choice game")
     
