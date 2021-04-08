@@ -1,12 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 print(__name__)
 
 # any time slash ("/") is selected, hi
-@app.route('/')
-def hello_world():
+@app.route('/<username>')
+def hello_world(username=None):
 	# render_template looks for a folder called "template"
-	return render_template("./index.html")
+	return render_template("./index.html", name=username)
 
 @app.route('/about.html')
 def about():
