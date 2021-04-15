@@ -3,21 +3,31 @@ app = Flask(__name__)
 print(__name__)
 
 # any time slash ("/") is selected, hi
-@app.route('/<username>/<int:post_id>')
-def hello_world(username=None, post_id=None):
+@app.route('/')
+def my_home():
 	# render_template looks for a folder called "template"
-	return render_template("index.html", name=username, post_id=post_id)
+	return render_template("index.html")
 
 @app.route('/about.html')
 def about():
 	# render_template looks for a folder called "template"
 	return render_template("about.html")
 
+@app.route('/works.html')
+def works():
+	return render_template("works.html")
+
+@app.route('/contact.html')
+def contact():
+	return render_template("contact.html")
+
+@app.route('/components.html')
+def components():
+	return render_template("components.html")
+
+
 @app.route('/blog')
 def blog():
 	return "These are my thoughts on blogs."
 
 
-@app.route('/blog/2020/dogs')
-def blog2():
-	return "this is my dog"
