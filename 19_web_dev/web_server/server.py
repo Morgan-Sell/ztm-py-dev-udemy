@@ -8,6 +8,10 @@ def my_home():
 	# render_template looks for a folder called "template"
 	return render_template("index.html")
 
+@app.route('/')
+def index():
+	return render_template("index.html")
+
 @app.route('/about.html')
 def about():
 	# render_template looks for a folder called "template"
@@ -25,9 +29,5 @@ def contact():
 def components():
 	return render_template("components.html")
 
-
-@app.route('/blog')
-def blog():
-	return "These are my thoughts on blogs."
 
 
