@@ -36,4 +36,13 @@ Underneath the hood of Flask is Jinja, a templating language.
 
 
 Flask has variable rules that allow functions to receive <variable_name> as a keyword argument.
+
+
+UUID = unique identifier
+
+MIME = Multipruprose Internet Mail Extensions. Used by browsers to determine how to process a url. 
+	** Browsers do NOT use the file extension.
+	** Flasks sends the MIME type to the browser.
+
 ""
+
