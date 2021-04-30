@@ -1,0 +1,4 @@
+
+
+Selenium works with drivers.
+Each browser - e.g. Chrome and Firefox - has a different driver.

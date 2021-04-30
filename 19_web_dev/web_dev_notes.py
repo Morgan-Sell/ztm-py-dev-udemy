@@ -23,7 +23,7 @@ To open a virtual environemnt, assuming it's called "venv", write:
 Do not call Python file "flask.py". It will interfere with the package.
 
 To run Flask, I must run the following:
-	1) export FLASK_APP=server_file.py
+	1) export FLASK_APP=server_file.py  <-- "server_file.py" is a generic placeholder. 
 	2) flask run
 
 Must store style.css in a "static folder"
@@ -43,6 +43,25 @@ UUID = unique identifier
 MIME = Multipruprose Internet Mail Extensions. Used by browsers to determine how to process a url. 
 	** Browsers do NOT use the file extension.
 	** Flasks sends the MIME type to the browser.
+
+
+@app.route("/<url_param_name>")  <-- Dynamically accepts 
+
+Must write informativon received to a file that is savined on disk. 
+	** Otherwise, once the server terminates, the information is lost b/c it is stored on memory.
+
+
+Two main types of DMBS:
+	** Relational Databases, e.g. PostgreSQL, MySQL
+		** SQL allows the the database to communicate with the Node Server.
+	** Nonrelational Database, e.g. MongoDB, Cassandra
+		** No schema required.
+		** MongdDB is document-oriented. It stores data as documents. Each observation is its own document.
+
+pip freeze <-- captures the package installed in the current environment.
+	** pip freez > requirements.txt <-- Creates text file with all the package dependencies.
+
+
 
 ""
 
